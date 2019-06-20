@@ -1,7 +1,10 @@
+import { FaPenFancy } from 'react-icons/fa'
+
 export default {
   name: 'post',
   title: 'Post',
   type: 'document',
+  icon: FaPenFancy,
   fields: [
     {
       name: 'title',
@@ -18,12 +21,6 @@ export default {
       }
     },
     {
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'}
-    },
-    {
       name: 'mainImage',
       title: 'Main image',
       type: 'image',
@@ -32,10 +29,15 @@ export default {
       }
     },
     {
-      name: 'categories',
-      title: 'Categories',
+      name: 'tags',
+      title: 'Tags',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'category'}}]
+      of: [{type: 'reference', to: {type: 'tag'}}]
+    },
+    {
+      name: 'brief',
+      title: 'Brief',
+      type: 'text'
     },
     {
       name: 'publishedAt',
@@ -48,18 +50,12 @@ export default {
       type: 'blockContent'
     }
   ],
-
   preview: {
     select: {
       title: 'title',
-      author: 'author.name',
+      tags: 'tags',
+      brief: 'brief',
       media: 'mainImage'
-    },
-    prepare(selection) {
-      const {author} = selection
-      return Object.assign({}, selection, {
-        subtitle: author && `by ${author}`
-      })
     }
   }
 }

@@ -15,6 +15,8 @@
   ],
   "dependencies": {
     "@sanity/base": "^0.140.36",
+    "@sanity/code-input": "^0.140.34",
+    "@sanity/color-input": "^0.140.34",
     "@sanity/components": "^0.140.36",
     "@sanity/core": "^0.140.36",
     "@sanity/default-layout": "^0.140.36",
@@ -22,7 +24,8 @@
     "@sanity/desk-tool": "^0.140.37",
     "prop-types": "^15.6",
     "react": "^16.2",
-    "react-dom": "^16.2"
+    "react-dom": "^16.2",
+    "react-icons": "^3.7.0"
   },
   "devDependencies": {}
 }
