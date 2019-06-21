@@ -58,6 +58,7 @@ export const Subtitle = styled.h3`
     `
       : `undefined`};
 `
+
 export const PageTitle = styled.h1`
   font-weight: 900;
   font-size: 5vmax;
@@ -76,5 +77,14 @@ export const PageTitle = styled.h1`
     @media (max-width: ${sizes.medium}) {
       margin-top: 3.8rem;
     }
+  }
+`
+export const PostTitle = styled.h1`
+  font-weight: 900;
+  font-size: 5vmax;
+  margin: 1rem 10%;
+  margin-bottom: 3rem;
+  @media (max-width: ${sizes.medium}) {
+    font-size: 4vmax;
   }
 `

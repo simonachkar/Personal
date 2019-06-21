@@ -3,11 +3,11 @@ import { graphql, useStaticQuery } from 'gatsby'
 import PostPreview from './PostPreview'
 
 export default ({ limit }) => {
-  const data = limit ? useStaticQuery(
+  const data =  useStaticQuery(
     graphql`
-      query HomeBlogPostsQuery {
+      query {
         posts: allSanityPost(
-          limit: 3
+          limit: 4
           sort: { fields: [publishedAt], order: DESC }
         ) {
           edges {
@@ -15,38 +15,9 @@ export default ({ limit }) => {
               id
               title
               brief
-              mainImage {
-                asset {
-                  _id
-                }
+              slug {
+                current
               }
-              tags {
-                name
-                bgColor {
-                  hex
-                }
-                textColor {
-                  hex
-                }
-              }
-            }
-          }
-        }
-      }
-    `
-  ) :
-  useStaticQuery(
-    graphql`
-      query BlogPostsQuery {
-        posts: allSanityPost(
-          limit: 12
-          sort: { fields: [publishedAt], order: DESC }
-        ) {
-          edges {
-            node {
-              id
-              title
-              brief
               mainImage {
                 asset {
                   _id

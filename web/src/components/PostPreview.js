@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { Link } from 'gatsby';
 import { colors, sizes } from '../utils/global'
 
 const PostPreview = styled.div`
@@ -20,18 +20,17 @@ const PostPreview = styled.div`
   }
 `
 
-const Title = styled.h3`
+const Title = styled(Link)`
+  border: none;
   &:hover {
     cursor: pointer;
     color: ${colors.hover};
   }
   @media (max-width: ${sizes.giant}) {
     font-size: 1.5vmax;
-    margin-bottom: 1.5rem;
   }
   @media (max-width: ${sizes.large}) {
     font-size: 2.5vmax;
-    margin-bottom: 0.8rem;
   }
   @media (max-width: ${sizes.medium}) {
     font-size: 3.5vmax;
@@ -113,10 +112,10 @@ const Button = styled.button`
 `
 
 export default ({ post }) => {
-  const { title, brief, tags } = post.node
+  const { title, brief, tags, slug } = post.node
   return (
     <PostPreview>
-      <Title>{title}</Title>
+      <h2><Title to={`/posts/${slug.current}`}>{title}</Title></h2>
       {tags.map(tag => (
         <Tag bgColor={tag.bgColor.hex} textColor={tag.textColor.hex}>
           #{tag.name}
