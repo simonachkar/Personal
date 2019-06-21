@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from 'styled-components'
-import { graphql, useStaticQuery } from 'gatsby'
+import React from './node_modules/react'
+import styled from './node_modules/styled-components'
+import { graphql, useStaticQuery } from './node_modules/gatsby'
 
-import Img from 'gatsby-image'
+import Img from './node_modules/gatsby-image'
 
 import { colors, sizes } from '../utils/global'
 

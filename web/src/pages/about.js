@@ -4,12 +4,11 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { PageTitle } from '../components/Shared'
 
-
 export default () => (
   <div>
     <Header page="about" />
+    <PageTitle>About Me</PageTitle>
     <div style={{ margin: '1rem 10%', paddingBottom: '1rem' }}>
-      <PageTitle>About Me</PageTitle>
       <p>
         If I were to describe myself in one sentence, I would say that I am a
         person that loves the art of creating. “To Create” is a divine act, it

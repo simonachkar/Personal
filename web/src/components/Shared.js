@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from './node_modules/styled-components'
 import { colors, sizes } from '../utils/global'
 
 export const Line = styled.hr`
@@ -61,6 +61,7 @@ export const Subtitle = styled.h3`
 export const PageTitle = styled.h1`
   font-weight: 900;
   font-size: 5vmax;
+  margin: 1rem 10%;
   margin-bottom: 3rem;
   @media (max-width: ${sizes.medium}) {
     font-size: 8vmax;

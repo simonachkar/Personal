@@ -27,5 +27,12 @@ module.exports = {
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: 'cpryzre4',
+        dataset: 'production'
+      },
+    },
   ],
 }
