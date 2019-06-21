@@ -1,9 +1,9 @@
 import React from 'react'
-
+import { Link } from 'gatsby'
 import Header from '../components/Header'
-import Footer from '../components/Footer';
-import Hero from '../components/Hero';
-import PostsList from '../components/PostsList';
+import Footer from '../components/Footer'
+import Hero from '../components/Hero'
+import PostsList from '../components/PostsList'
 import { Line, Title, Subtitle } from '../components/Shared'
 
 export default () => {
@@ -13,7 +13,11 @@ export default () => {
       <Hero />
       <Title>Sometimes I write </Title>
       <PostsList limit />
-      <Subtitle clickable>Read my Blog <small>></small></Subtitle>
+      <Link to="/blog/" style={{ border: 'none' }}>
+        <Subtitle clickable>
+          Read my Blog <small>></small>
+        </Subtitle>
+      </Link>
       <Footer />
     </div>
   )
