@@ -5,7 +5,8 @@ import LinkedIn from '../assets/icons/linkedin.svg'
 import Twitter from '../assets/icons/twitter.svg'
 import Instagram from '../assets/icons/instagram.svg'
 
-import { colors, sizes } from '../utils/global'
+import { sizes } from '../utils/global'
+import { Line } from './Shared';
 
 const Footer = styled.div`
   text-align: center;
@@ -39,15 +40,16 @@ const Icon = styled.a`
 export default () => {
   return (
     <Footer>
+      <Line />
       <Social>
-        <Icon href="https://github.com/simonachkar"  target="_blank"><Github /></Icon>
-        <Icon href="https://linkedin.com/in/simonachkar"  target="_blank"><LinkedIn /></Icon>
-        <Icon href="https://twitter.com/simonachkar_"  target="_blank"><Twitter /></Icon>
-        <Icon href="https://instagram.com/simonachkar_"  target="_blank"><Instagram /></Icon>
+        <Icon href="https://github.com/simonachkar" target="_blank" rel="noopener noreferrer"><Github /></Icon>
+        <Icon href="https://linkedin.com/in/simonachkar" target="_blank" rel="noopener noreferrer"><LinkedIn /></Icon>
+        <Icon href="https://twitter.com/simonachkar_" target="_blank" rel="noopener noreferrer"><Twitter /></Icon>
+        <Icon href="https://instagram.com/simonachkar_" target="_blank" rel="noopener noreferrer"><Instagram /></Icon>
       </Social>
       <p>All content &copy; Simon Achkar</p>
-      <p>This site is built with <a href="https://gatsbyjs.org" target="_blank">Gatsby</a> and hosted on <a href="https://netlify.com" target="_blank">  Netlify</a>. The source code is hosted on <a  href="https://github.com/simonachkar/SimonAchkar.com"  target="_blank" >Github</a></p>
-      <p>Made with Love, Coffee, Snacks, and Chocolate</p>
+      <p>This site is built with <a href="https://gatsbyjs.org" target="_blank" rel="noopener noreferrer">Gatsby</a> and <a href="https://sanity.io" target="_blank" rel="noopener noreferrer">Sanity</a>. The source code is hosted on <a  href="https://github.com/simonachkar/SimonAchkar.com" target="_blank" rel="noopener noreferrer">Github</a></p>
+      <p>Made with Love, Coffee, and a lot of Snacks</p>
     </Footer>
   )
 }
