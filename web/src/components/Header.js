@@ -1,6 +1,6 @@
-import React from './node_modules/react'
-import { Link } from './node_modules/gatsby'
-import styled from './node_modules/styled-components'
+import React from 'react'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
 
 import { colors, sizes } from '../utils/global'
 import logo from '../assets/images/logo.png'

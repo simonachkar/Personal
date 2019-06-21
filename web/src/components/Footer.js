@@ -1,12 +1,12 @@
-import React from './node_modules/react'
-import styled from './node_modules/styled-components'
+import React from 'react'
+import styled from 'styled-components'
 import Github from '../assets/icons/github.svg'
 import LinkedIn from '../assets/icons/linkedin.svg'
 import Twitter from '../assets/icons/twitter.svg'
 import Instagram from '../assets/icons/instagram.svg'
 
 import { sizes } from '../utils/global'
-import { Line } from './Shared';
+import { Line } from './Shared'
 
 const Footer = styled.div`
   text-align: center;
