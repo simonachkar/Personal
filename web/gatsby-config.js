@@ -31,7 +31,9 @@ module.exports = {
       resolve: 'gatsby-source-sanity',
       options: {
         projectId: 'cpryzre4',
-        dataset: 'production'
+        dataset: 'production',
+        watchMode: true,
+        overlayDrafts: true,
       },
     },
   ],

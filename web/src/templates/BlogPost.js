@@ -6,6 +6,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { PostTitle } from '../components/Shared'
 import BlockContent from './BlockContent'
+import MainImage from './MainImage';
 
 export const query = graphql`
   query($id: String!) {
@@ -14,6 +15,7 @@ export const query = graphql`
       title
       brief
       _rawBody
+      _rawMainImage
       slug {
         current
       }
@@ -49,9 +51,12 @@ const Tag = styled.span`
 
 const BlogPostTemplate = props => {
   const post = props.data.sanityPost
+  console.log(post);
+  
   return (
     <div>
       <Header />
+      { post._rawMainImage ? <MainImage img={post._rawMainImage} /> : undefined }
       <PostTitle>{post.title}</PostTitle>
       <div style={{ marginLeft: '10%' }}>
         {post.tags.map(tag => (
