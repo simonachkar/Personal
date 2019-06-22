@@ -65,6 +65,7 @@ export const PageTitle = styled.h1`
   margin: 1rem 10%;
   margin-bottom: 3rem;
   @media (max-width: ${sizes.medium}) {
+    margin: 3rem 5%;
     font-size: 8vmax;
   }
   &:before {

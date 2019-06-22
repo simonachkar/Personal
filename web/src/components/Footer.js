@@ -20,7 +20,7 @@ const Footer = styled.div`
       font-size: 0.9vmax;
     }
     @media (max-width: ${sizes.medium}) {
-      font-size: 1.5vmax;
+      font-size: 1.4vmax;
     }
   }
 `
