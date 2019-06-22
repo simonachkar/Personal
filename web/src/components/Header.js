@@ -59,6 +59,7 @@ const Menu = styled.ul`
 `
 
 const MenuItem = styled(Link)`
+  font-weight: 500;
   float: left;
   margin-left: 3rem;
   border-bottom: ${props =>

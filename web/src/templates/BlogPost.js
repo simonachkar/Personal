@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { PostTitle } from '../components/Shared'
+import BlockContent from './BlockContent'
 
 export const query = graphql`
   query($id: String!) {
@@ -31,9 +32,10 @@ const BlogPostTemplate = props => {
   const post = props.data.sanityPost
   return (
     <div>
-      <Header page="blog" />
+      <Header />
       <PostTitle>{post.title}</PostTitle>
       <div style={{ margin: '1rem 10%', paddingBottom: '1rem' }}>
+      <BlockContent blocks={post._rawBody} />
       </div>
       <Footer />
     </div>

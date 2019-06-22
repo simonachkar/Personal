@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import PostsList from '../components/PostsList'
-import { Line, Title, Subtitle } from '../components/Shared'
+import { Title, Subtitle } from '../components/Shared'
 
 export default () => {
   return (

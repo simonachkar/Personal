@@ -80,11 +80,10 @@ export const PageTitle = styled.h1`
   }
 `
 export const PostTitle = styled.h1`
-  font-weight: 900;
-  font-size: 5vmax;
+  font-size: 4vmax;
   margin: 1rem 10%;
   margin-bottom: 3rem;
   @media (max-width: ${sizes.medium}) {
-    font-size: 4vmax;
+    font-size: 3vmax;
   }
 `
