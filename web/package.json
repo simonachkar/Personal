@@ -13,6 +13,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
+    "@microlink/react": "^4.0.1",
     "@sanity/block-content-to-react": "^2.0.6",
     "@sanity/image-url": "^0.140.12",
     "babel-plugin-styled-components": "^1.10.1",

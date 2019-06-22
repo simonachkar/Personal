@@ -60,6 +60,18 @@ export default {
     },
     {
       type: 'code'
+    },
+    {
+      title: 'Meta Link',
+      name: 'metalink',
+      type: 'object',
+      fields: [
+        {
+          title: 'URL',
+          name: 'href',
+          type: 'url'
+        }
+      ]
     }
   ]
 }

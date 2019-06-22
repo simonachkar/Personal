@@ -1,9 +1,10 @@
 import BaseBlockContent from '@sanity/block-content-to-react'
 import React from 'react'
-import SyntaxHighlighter from 'react-syntax-highlighter';
-import { dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import { dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import clientConfig from '../../client-config'
 import Figure from './Figure'
+import URLCard from './URLCard'
 
 const serializers = {
   types: {
@@ -32,13 +33,24 @@ const serializers = {
       return <Figure img={props} />
     },
     code(props) {
-      return <SyntaxHighlighter language={props.node.language} style={dracula}>{props.node.code}</SyntaxHighlighter>
+      return (
+        <SyntaxHighlighter language={props.node.language} style={dracula}>
+          {props.node.code}
+        </SyntaxHighlighter>
+      )
+    },
+    metalink(props) {
+      return <URLCard url={props.node.href} />
     },
   },
 }
 
 const BlockContent = ({ blocks }) => (
-  <BaseBlockContent blocks={blocks} serializers={serializers} {...clientConfig.sanity} />
+  <BaseBlockContent
+    blocks={blocks}
+    serializers={serializers}
+    {...clientConfig.sanity}
+  />
 )
 
 export default BlockContent
