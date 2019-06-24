@@ -1,6 +1,6 @@
 import Typography from 'typography'
 import kirkhamTheme from 'typography-theme-kirkham'
-import { colors } from './global'
+import { colors, sizes } from './global'
 
 kirkhamTheme.googleFonts = [
   {

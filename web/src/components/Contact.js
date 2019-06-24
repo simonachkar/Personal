@@ -13,7 +13,7 @@ const Form = styled.form`
   display: flex;
   font-weight: 500;
   flex-direction: column;
-  margin: 0 20% 3rem 20%;
+  margin: 2rem 20% 3rem 20%;
   text-transform: uppercase;
 `
 

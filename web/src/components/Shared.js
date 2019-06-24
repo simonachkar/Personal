@@ -75,8 +75,18 @@ export const PageTitle = styled.h1`
     background-color: ${colors.primary};
     position: absolute;
     margin-top: 4.5rem;
+    @media (max-width: ${sizes.giant}) {
+      height: 1rem;
+      width: 5rem;
+      margin-top: 8rem;
+    }
+    @media (max-width: ${sizes.large}) {
+      height: 0.6rem;
+      width: 4rem;
+      margin-top: 4.5rem;
+    }
     @media (max-width: ${sizes.medium}) {
-      margin-top: 3.8rem;
+      margin-top: 3.5rem;
     }
   }
 `
@@ -85,5 +95,18 @@ export const PostTitle = styled.h1`
   margin: 1rem 10%;
   @media (max-width: ${sizes.medium}) {
     font-size: 3vmax;
+  }
+`
+export const Text = styled.p`
+  margin: 1rem 10%;
+  @media (max-width: ${sizes.giant}) {
+    font-size: 1vmax;
+  }
+  @media (max-width: ${sizes.large}) {
+    font-size: 1.4vmax;
+  }
+  @media (max-width: ${sizes.medium}) {
+    font-size: 2vmax;
+    margin: 0.6rem 5%;
   }
 `
