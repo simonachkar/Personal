@@ -6,7 +6,8 @@ import clientConfig from '../../client-config'
 import { sizes } from '../utils/global'
 
 const Figure = styled.div`
-  padding: 2rem 10%;
+  padding: 1rem 10% 2rem 10%;
+  width: 70%;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -18,7 +19,7 @@ const Figure = styled.div`
 export default ({ img }) => {
   const fluidProps = getFluidGatsbyImage(
     img.node.asset._ref,
-    { maxWidth: 600 },
+    { maxWidth: 800 },
     ...clientConfig.sanity
   )
   return (

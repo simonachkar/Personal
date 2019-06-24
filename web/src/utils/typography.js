@@ -29,6 +29,10 @@ kirkhamTheme.overrideThemeStyles = () => ({
       color: 'white',
     },
   },
+  'h1, h2, h3': {
+    paddingTop: '0.8rem',
+    paddingBottom: '0.2rem'
+  }
 })
 
 const typography = new Typography(kirkhamTheme)

@@ -1,12 +1,13 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
+import moment from 'moment'
 import { sizes } from '../utils/global'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { PostTitle } from '../components/Shared'
 import BlockContent from './BlockContent'
-import MainImage from './MainImage';
+import MainImage from './MainImage'
 
 export const query = graphql`
   query($id: String!) {
@@ -14,6 +15,7 @@ export const query = graphql`
       id
       title
       brief
+      publishedAt
       _rawBody
       _rawMainImage
       slug {
@@ -51,17 +53,20 @@ const Tag = styled.span`
 
 const BlogPostTemplate = props => {
   const post = props.data.sanityPost
-  console.log(post);
-  
+  console.log(post)
+
   return (
     <div>
       <Header />
-      { post._rawMainImage ? <MainImage img={post._rawMainImage} /> : undefined }
+      {post._rawMainImage ? <MainImage img={post._rawMainImage} /> : undefined}
       <PostTitle>{post.title}</PostTitle>
+      <div style={{ margin: '1rem', marginLeft: '10%', fontStyle: 'italic' }}>
+        <b>Published on</b> {moment(post.publishedAt).format('MMMM Do YYYY')}
+      </div>
       <div style={{ marginLeft: '10%' }}>
         {post.tags.map(tag => (
           <Tag bgColor={tag.bgColor.hex} textColor={tag.textColor.hex}>
-            #{tag.name}
+            # {tag.name}
           </Tag>
         ))}
       </div>
