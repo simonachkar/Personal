@@ -90,6 +90,7 @@ export const PageTitle = styled.h1`
     }
   }
 `
+
 export const PostTitle = styled.h1`
   font-size: 4vmax;
   margin: 1rem 10%;
@@ -97,6 +98,7 @@ export const PostTitle = styled.h1`
     font-size: 3vmax;
   }
 `
+
 export const Text = styled.p`
   margin: 1rem 10%;
   @media (max-width: ${sizes.giant}) {
@@ -108,5 +110,42 @@ export const Text = styled.p`
   @media (max-width: ${sizes.medium}) {
     font-size: 2vmax;
     margin: 0.6rem 5%;
+  }
+`
+
+export const Error = styled.p`
+  color: red;
+  margin: 1rem;
+  text-align: center;
+  @media (max-width: ${sizes.giant}) {
+    font-size: 1vmax;
+  }
+  @media (max-width: ${sizes.large}) {
+    font-size: 1.4vmax;
+  }
+  @media (max-width: ${sizes.medium}) {
+    font-size: 2vmax;
+    margin: 0.6rem 5%;
+  }
+  &:before {
+    content: '⚠️ '
+  }
+`
+
+export const TextRes = styled.p`
+    margin: 1rem;
+  text-align: center;
+  @media (max-width: ${sizes.giant}) {
+    font-size: 1vmax;
+  }
+  @media (max-width: ${sizes.large}) {
+    font-size: 1.4vmax;
+  }
+  @media (max-width: ${sizes.medium}) {
+    font-size: 2vmax;
+    margin: 0.6rem 5%;
+  }
+  &:before {
+    content: '✅ '
   }
 `
