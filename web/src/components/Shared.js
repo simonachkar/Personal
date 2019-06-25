@@ -62,12 +62,14 @@ export const Subtitle = styled.h3`
 export const PageTitle = styled.h1`
   font-weight: 900;
   font-size: 5vmax;
-  margin: 1rem 10%;
   margin-bottom: 3rem;
   @media (max-width: ${sizes.medium}) {
-    margin: 3rem 5%;
     font-size: 8vmax;
   }
+  @media (max-width: ${sizes.small}) {
+    font-size: 6vmax;
+  }
+
   &:before {
     content: ' ';
     height: 0.6rem;
@@ -93,14 +95,15 @@ export const PageTitle = styled.h1`
 
 export const PostTitle = styled.h1`
   font-size: 4vmax;
-  margin: 1rem 10%;
   @media (max-width: ${sizes.medium}) {
-    font-size: 3vmax;
+    font-size: 4vmax;
+  }
+  @media (max-width: ${sizes.small}) {
+    font-size: 5vmax;
   }
 `
 
 export const Text = styled.p`
-  margin: 1rem 10%;
   @media (max-width: ${sizes.giant}) {
     font-size: 1vmax;
   }
@@ -108,8 +111,7 @@ export const Text = styled.p`
     font-size: 1.4vmax;
   }
   @media (max-width: ${sizes.medium}) {
-    font-size: 2vmax;
-    margin: 0.6rem 5%;
+    font-size: 2.4vmax;
   }
 `
 
@@ -128,12 +130,12 @@ export const Error = styled.p`
     margin: 0.6rem 5%;
   }
   &:before {
-    content: '⚠️ '
+    content: '⚠️ ';
   }
 `
 
 export const TextRes = styled.p`
-    margin: 1rem;
+  margin: 1rem;
   text-align: center;
   @media (max-width: ${sizes.giant}) {
     font-size: 1vmax;
@@ -146,6 +148,6 @@ export const TextRes = styled.p`
     margin: 0.6rem 5%;
   }
   &:before {
-    content: '✅ '
+    content: '✅ ';
   }
 `

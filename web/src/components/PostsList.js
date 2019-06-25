@@ -1,9 +1,14 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import styled from 'styled-components'
 import PostPreview from './PostPreview'
 
-export default ({ limit }) => {
-  const data =  useStaticQuery(
+const PostList = styled.div`
+  margin: 2vmax 0;
+`
+
+export default () => {
+  const data = useStaticQuery(
     graphql`
       query {
         posts: allSanityPost(
@@ -42,10 +47,10 @@ export default ({ limit }) => {
   const posts = data && data.posts.edges
 
   return (
-    <>
+    <PostList>
       {posts.map(post => (
         <PostPreview key={post.node.id} post={post} />
       ))}
-    </>
+    </PostList>
   )
 }

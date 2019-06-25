@@ -5,11 +5,11 @@ import { getFluidGatsbyImage } from 'gatsby-source-sanity'
 import clientConfig from '../../client-config'
 
 const Figure = styled.div`
-  padding: 2rem 0;
-  margin-left: auto;
-  margin-right: auto;
+  padding: 1rem 0;
 `
 const Image = styled(Img)`
+  position: absolute;
+  margin: 0;
   height: 25vmax;
 `
 

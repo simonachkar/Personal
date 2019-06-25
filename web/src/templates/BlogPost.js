@@ -8,6 +8,7 @@ import Footer from '../components/Footer'
 import { PostTitle } from '../components/Shared'
 import BlockContent from './BlockContent'
 import MainImage from './MainImage'
+import Layout from '../components/Layout'
 
 export const query = graphql`
   query($id: String!) {
@@ -59,21 +60,22 @@ const BlogPostTemplate = props => {
     <div>
       <Header />
       {post._rawMainImage ? <MainImage img={post._rawMainImage} /> : undefined}
-      <PostTitle>{post.title}</PostTitle>
-      <div style={{ margin: '1rem', marginLeft: '10%', fontStyle: 'italic' }}>
-        <b>Published on</b> {moment(post.publishedAt).format('MMMM Do YYYY')}
-      </div>
-      <div style={{ marginLeft: '10%' }}>
-        {post.tags.map(tag => (
-          <Tag bgColor={tag.bgColor.hex} textColor={tag.textColor.hex}>
-            # {tag.name}
-          </Tag>
-        ))}
-      </div>
-      <div style={{ margin: '2.5rem 10%', paddingBottom: '1rem' }}>
-        <BlockContent blocks={post._rawBody} />
-      </div>
-      <Footer />
+      <Layout header={false}>
+        <PostTitle>{post.title}</PostTitle>
+        <div style={{ marginBottom: '0.5rem' , fontStyle: 'italic' }}>
+          <b>Published on</b> {moment(post.publishedAt).format('MMMM Do YYYY')}
+        </div>
+        <div style={{ marginBottom: '2.5rem' }}>
+          {post.tags.map(tag => (
+            <Tag bgColor={tag.bgColor.hex} textColor={tag.textColor.hex}>
+              # {tag.name}
+            </Tag>
+          ))}
+        </div>
+        <div style={{ paddingBottom: '1rem' }}>
+          <BlockContent blocks={post._rawBody} />
+        </div>
+      </Layout>
     </div>
   )
 }

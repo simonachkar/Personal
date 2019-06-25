@@ -7,10 +7,10 @@ const PostPreview = styled.div`
   margin: auto;
   margin-bottom: 2rem;
   @media (max-width: ${sizes.giant}) {
-    width: 30%;
+    width: 60%;
   }
   @media (max-width: ${sizes.large}) {
-    width: 50%;
+    width: 70%;
   }
   @media (max-width: ${sizes.medium}) {
     width: 80%;

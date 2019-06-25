@@ -12,7 +12,7 @@ const Form = styled.form`
   display: flex;
   font-weight: 500;
   flex-direction: column;
-  margin: 2rem 20% 3rem 20%;
+  margin: 2rem 2% 3rem 2%;
 `
 
 const Input = styled.input`
