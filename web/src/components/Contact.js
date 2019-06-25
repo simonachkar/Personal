@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import ReCAPTCHA from 'react-google-recaptcha'
 import ReactLoading from 'react-loading'
+import axios from 'axios'
+import moment from 'moment'
 import { colors, sizes } from '../utils/global'
 import { Error, TextRes } from './Shared'
 
@@ -114,7 +116,7 @@ export default () => {
   const [res, setRes] = useState('')
   const [loading, setLoading] = useState(false)
 
-  const submit = e => {
+  const submit = async e => {
     e.preventDefault()
 
     let re = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
@@ -133,10 +135,30 @@ export default () => {
     } else {
       setError('')
       setLoading(true)
-      setTimeout(() => {
-        setLoading(false)
-        setRes('Thank you! Your message has been sent successfully.')
-      }, 3000)
+
+      // prettier-ignore
+      const html = `
+      <p>
+      <li>Name: ${name}</li>
+      <li>Email: ${email}</li>
+      <li>Date & Time: ${moment(new Date).format('MMMM Do YYYY, h:mm:ss a')}</li>
+      </p>    
+      <br />
+      <p>${message}</p>
+      `
+
+      axios
+        .post(process.env.GATSBY_SENDEMAIL_FUNC, {
+          html,
+        })
+        .then(() => {
+          setLoading(false)
+          setRes('Thank you! Your message has been sent successfully.')
+        })
+        .catch(err => {
+          console.log(err)
+          setError('Sending mail failed, try again later.')
+        })
     }
   }
 
