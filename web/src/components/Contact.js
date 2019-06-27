@@ -4,6 +4,7 @@ import ReCAPTCHA from 'react-google-recaptcha'
 import ReactLoading from 'react-loading'
 import axios from 'axios'
 import moment from 'moment'
+import sanitizeHtml from 'sanitize-html'
 import { colors, sizes } from '../utils/global'
 import { Error, TextRes } from './Shared'
 
@@ -144,7 +145,7 @@ export default () => {
       <li>Date & Time: ${moment(new Date).format('MMMM Do YYYY, h:mm:ss a')}</li>
       </p>    
       <br />
-      <p>${message}</p>
+      <p>${sanitizeHtml(message)}</p>
       `
 
       axios
