@@ -3,6 +3,7 @@ import React from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import clientConfig from '../../client-config'
+import { Text } from '../components/Shared'
 import Figure from './Figure'
 import URLCard from './URLCard'
 
@@ -26,7 +27,7 @@ const serializers = {
           return <blockquote>{props.children}</blockquote>
 
         default:
-          return <p>{props.children}</p>
+          return <Text>{props.children}</Text>
       }
     },
     image(props) {
