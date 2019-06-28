@@ -158,6 +158,7 @@ export default () => {
         })
         .catch(err => {
           console.log(err)
+          setLoading(false)
           setError('Sending mail failed, try again later.')
         })
     }
