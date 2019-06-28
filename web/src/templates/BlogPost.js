@@ -57,9 +57,8 @@ const BlogPostTemplate = props => {
 
   return (
     <div>
-      <Header />
+    <Layout>
       {post._rawMainImage ? <MainImage img={post._rawMainImage} /> : undefined}
-      <Layout header={false}>
         <PostTitle>{post.title}</PostTitle>
         <div style={{ marginBottom: '0.5rem' , fontStyle: 'italic' }}>
           <b>Published on</b> {moment(post.publishedAt).format('MMMM Do YYYY')}

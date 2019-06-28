@@ -36,5 +36,6 @@ module.exports = {
         overlayDrafts: true,
       },
     },
+    `gatsby-plugin-favicon`,
   ],
 }
