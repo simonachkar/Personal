@@ -12,10 +12,10 @@ const Margin = styled.div`
   }
 `
 
-export default ({ children, page, header = true }) => {
+export default ({ children, page }) => {
   return (
     <div>
-      {header ? <Header page={page} /> : undefined}
+      <Header page={page} />
       <Margin>{children}</Margin>
       <Footer />
     </div>
