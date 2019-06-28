@@ -10,7 +10,7 @@ const Hero = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: auto;
-  width: 90%;
+  width: 100%;
   margin-top: 3vw;
   flex-direction: row;
   justify-content: space-between;

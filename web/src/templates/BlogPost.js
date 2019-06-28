@@ -8,6 +8,7 @@ import { PostTitle } from '../components/Shared'
 import BlockContent from './BlockContent'
 import MainImage from './MainImage'
 import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
 export const query = graphql`
   query($id: String!) {
@@ -54,13 +55,21 @@ const Tag = styled.span`
 const BlogPostTemplate = props => {
   const post = props.data.sanityPost
   console.log(post)
-
+  let tags = []
+  {
+    post.tags.map(tag => tags.push(tag))
+  }
   return (
     <div>
-    <Layout>
-      {post._rawMainImage ? <MainImage img={post._rawMainImage} /> : undefined}
+      <Layout>
+        <SEO title={post.title} keywords={tags} description={post.brief} />
+        {post._rawMainImage ? (
+          <MainImage img={post._rawMainImage} />
+        ) : (
+          undefined
+        )}
         <PostTitle>{post.title}</PostTitle>
-        <div style={{ marginBottom: '0.5rem' , fontStyle: 'italic' }}>
+        <div style={{ marginBottom: '0.5rem', fontStyle: 'italic' }}>
           <b>Published on</b> {moment(post.publishedAt).format('MMMM Do YYYY')}
         </div>
         <div style={{ marginBottom: '2.5rem' }}>

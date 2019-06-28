@@ -1,14 +1,15 @@
 import React from 'react'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 import NotFound from '../components/NotFound'
 
 export default () => {
   return (
     <div>
-      <Header />
-      <NotFound />
-      <Footer />
+      <Layout>
+        <SEO title="404: Not found" />
+        <NotFound />
+      </Layout>
     </div>
   )
 }

@@ -2,10 +2,12 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/Layout'
 import { PageTitle, Text } from '../components/Shared'
+import SEO from '../components/SEO'
 
 export default () => (
   <div>
     <Layout page="about">
+      <SEO title="Simon Achkar | Full-Stack Developer" />
       <PageTitle>About Me</PageTitle>
       <Text>
         If I were to describe myself in one sentence, I would say that I am a
