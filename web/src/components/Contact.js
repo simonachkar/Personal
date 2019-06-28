@@ -142,7 +142,7 @@ export default () => {
       <p>
       <li>Name: ${name}</li>
       <li>Email: ${email}</li>
-      <li>Date & Time: ${moment(new Date).format('MMMM Do YYYY, h:mm:ss a')}</li>
+      <li>Date & Time: ${moment(new Date).format('MMMM Do YYYY, h:mm a')}</li>
       </p>    
       <br />
       <p>${sanitizeHtml(message)}</p>
