@@ -32,7 +32,7 @@ export default () => (
       <Text>
         I still consider myself to be on a journey of finding myself. While on
         this journey, I create stuff and by stuff, I mean websites, web apps,
-        and mobile apps and even music and art.
+        and mobile apps.
       </Text>
       <Text>
         Got an interesting weekend project? <Link to="contact">Hit me up</Link>.

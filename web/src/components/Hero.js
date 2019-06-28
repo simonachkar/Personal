@@ -86,8 +86,7 @@ export default () => {
         <SmallText>
           I'm a Full-Stack developer that likes to create stuff and solve
           problems. I have been developing websites, web apps, and mobile apps
-          for more than two years. Sometimes I write, play music, and make
-          youtube videos.
+          for more than two years.
         </SmallText>
       </Text>
     </Hero>
