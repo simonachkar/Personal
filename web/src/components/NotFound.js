@@ -10,7 +10,6 @@ const Hero = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: auto;
-  width: 90%;
   margin-top: 3vw;
   flex-direction: row;
   justify-content: space-between;
@@ -43,7 +42,7 @@ const Avatar = styled(Img)`
 `
 
 const Text = styled.div`
-  width: 50%;
+  width: 40%;
   @media (max-width: ${sizes.medium}) {
     width: 100%;
   }
