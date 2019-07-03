@@ -37,5 +37,12 @@ module.exports = {
       },
     },
     `gatsby-plugin-favicon`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GATSBY_GOOGLE_ANALYTICS_TRACKING_ID,
+        head: false,
+      },
+    },
   ],
 }
