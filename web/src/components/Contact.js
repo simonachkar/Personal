@@ -164,7 +164,6 @@ export default () => {
     }
   }
 
-  console.log(name, email, message)
   return (
     <Form>
       <Input
