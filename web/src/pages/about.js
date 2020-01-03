@@ -25,14 +25,9 @@ export default () => (
         Canada for my Masters degree.
       </Text>
       <Text>
-        At the moment, I am pursuing my Masters in Computing and Data Analytics
-        in Halifax, NS at Saint Mary’s University and working as a Full-Stack
-        developer at <a href="https://gbstech.com">GBS Technologies</a>.
-      </Text>
-      <Text>
-        I still consider myself to be on a journey of finding myself. While on
-        this journey, I create stuff and by stuff, I mean websites, web apps,
-        and mobile apps.
+        I did my Masters in Computing and Data Analytics
+        in Halifax, NS at Saint Mary’s University and I’m currently working as a Software
+        developer at <a href="https://www.redspace.com/">REDSpace</a>.
       </Text>
       <Text>
         Got an interesting weekend project? <Link to="contact">Hit me up</Link>.
